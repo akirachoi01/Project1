@@ -1,42 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MARUYATV - Powerful Video Embed API</title>
+  <title>VIDEASY App</title>
+  <!-- Tailwind CSS CDN - essential for the styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar styles for Tailwind's scrollbar-thin utility */
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 8px;
+      height: 8px; /* For horizontal scrollbars */
+    }
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: rgba(139, 92, 246, 0.2); /* purple-500/20 */
+      border-radius: 4px;
+      border: 2px solid transparent; /* Adjust based on background */
+    }
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(139, 92, 246, 0.4); /* purple-500/40 */
+    }
 
-  <link rel="icon" type="image/png" href="https://i.imgur.com/cmOdVwr.png.png" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Maruyatv - The most powerful video embed API. Integrate seamless video playback anywhere." />
-  <meta name="keywords" content="video api, embed, streaming, player, video platform" />
-  <meta name="author" content="Maruyatv" />
+    /* Basic body styles for dark theme and full height */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      background-color: #121212; /* Dark background */
+      color: white; /* Default text color */
+      min-height: 100vh;
+      width: 100%;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
 
-  <link rel="manifest" href="manifest.html" />
-  <link rel="apple-touch-icon" href="https://i.imgur.com/cmOdVwr.png.png" />
-  <link rel="icon" sizes="32x32" href="https://i.imgur.com/cmOdVwr.png.png" />
-  <link rel="icon" sizes="16x16" href="https://i.imgur.com/cmOdVwr.png.png" />
-
-  <!-- Preload assets -->
-  <link rel="preload" href="https://i.imgur.com/cmOdVwr.png.png" as="image" />
-  <link rel="preconnect" href="https://api.videasy.net/" />
-  <link rel="preconnect" href="https://player.videasy.net/" />
-
-  <!-- Preload fonts -->
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" />
-
-  <!-- Player styles and scripts -->
-  <link rel="stylesheet" href="FreeTV/style.css" />
-  <script src="https://jwplayer.salidaph.online/player/v/8.36.6/jwplayer.js"></script>
-  <script src="FreeTV/channels.js" defer></script>
-  <script src="FreeTV/st.js" defer></script>
+    /* Styles for the background grid pattern */
+    .bg-grid-pattern {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, #2a2a2a 1px, transparent 1px),
+                          linear-gradient(to bottom, #2a2a2a 1px, transparent 1px);
+    }
+  </style>
 </head>
-
 <body>
-  <div id="root">
-    <!-- React or Vanilla JS will inject content here -->
-  </div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!-- Your compiled React application JavaScript will be loaded here by your build tool.
+       In a typical React project, this would be auto-generated as main.js or index.js -->
+   <script type="module" src="/assets/index.js"></script> 
 </body>
-
 </html>
-
